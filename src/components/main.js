@@ -1,6 +1,4 @@
-import React from 'react'
 import React, { useEffect, useState } from 'react';
-
 import "../css/main.css"
 
 const Main = () => {
@@ -108,13 +106,48 @@ const Main = () => {
             <span id="expense">{formatter.format(expense)}</span>
           </div>
         </header>
+        <section>
+          <h3>Transactions</h3>
+          <div id="transactionList">
+            {renderList()}
+          </div>
+          <div id="status" />
+        </section>
+        <section>
+          <h3>Add Transaction</h3>
+          <form id="transactionForm" onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="type">
+                <input type="checkbox" name="type" id="type" />
+                <div className="option">
+                  <span>Expense</span>
+                  <span>Income</span>
+                </div>
+              </label>
+            </div>
+            <div>
+              <label htmlFor="name">Name</label>
+              <input type="text" name="name" required="" />
+            </div>
+            <div>
+              <label htmlFor="date">Date</label>
+              <input type="date" name="date" required="" />
+            </div>
+            <div>
+              <label htmlFor="amount">Amount</label>
+              <input
+                type="number"
+                name="amount"
+                defaultValue={0}
+                min="0.01"
+                step="0.01"
+                required=""
+              />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </section>
       </main>
-      <form id="transactionForm" onSubmit={handleSubmit}>
-        {/* Add your form fields here */}
-      </form>
-      <div id="transactionList">
-        {renderList()}
-      </div>
     </>
   );
 };

@@ -1,6 +1,5 @@
 
 import React from 'react';
-import Main from "./components/navbar.js"
 import Main from "./components/main.js"
 
 
@@ -9,7 +8,6 @@ const App = () => {
   return (
     <>
       {/* Render the navbar component */}
-      <Navbar/>
       {/* Render the main component */}
       <Main/>
 
