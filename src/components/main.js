@@ -89,7 +89,7 @@ const Main = () => {
   return (
     <>
       <div id="title">
-        <h1>Expense Tracker</h1>
+        <h1>Tracker</h1>
       </div>
       <br/>
         <header>
