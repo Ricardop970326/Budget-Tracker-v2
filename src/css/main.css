@@ -97,7 +97,7 @@ ul li .name p {
 }
 ul li .amount {
   font-weight: 600;
-}
+}/*///// */
 ul li .amount.income {
   color: blue;
 }
