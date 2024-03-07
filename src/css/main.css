@@ -37,6 +37,7 @@ header {
   margin-bottom: 0.5rem;
   background-color:whitesmoke;
   border: 2px solid black;
+  box-shadow: 3px 3px 4px grey;
   color: black;
   padding: 1rem;
   text-align: center;
