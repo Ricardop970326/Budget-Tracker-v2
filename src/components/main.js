@@ -91,13 +91,13 @@ const Main = () => {
       <div id="title">
         <h1>Expense Tracker</h1>
       </div>
-      <main>
+      <br/>
         <header>
-          <div>
+        <div>
             <h5>Total Balance</h5>
             <span id="balance">{formatter.format(balance)}</span>
           </div>
-          <div>
+        <div>
             <h5>Income</h5>
             <span id="income">{formatter.format(income)}</span>
           </div>
@@ -105,16 +105,11 @@ const Main = () => {
             <h5>Expense</h5>
             <span id="expense">{formatter.format(expense)}</span>
           </div>
+          
         </header>
+        <main>
         <section>
-          <h3>Transactions</h3>
-          <div id="transactionList">
-            {renderList()}
-          </div>
-          <div id="status" />
-        </section>
-        <section>
-          <h3>Add Transaction</h3>
+          <h3>Add Here</h3>
           <form id="transactionForm" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="type">
@@ -125,14 +120,7 @@ const Main = () => {
                 </div>
               </label>
             </div>
-            <div>
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" required="" />
-            </div>
-            <div>
-              <label htmlFor="date">Date</label>
-              <input type="date" name="date" required="" />
-            </div>
+            
             <div>
               <label htmlFor="amount">Amount</label>
               <input
@@ -144,8 +132,25 @@ const Main = () => {
                 required=""
               />
             </div>
+            <div>
+              <label htmlFor="name">Name</label>
+              <input type="text" name="name" required="" />
+            </div>
+            <div>
+              <label htmlFor="date">Date</label>
+              <input type="date" name="date" required="" />
+            </div>
+           
+            
             <button type="submit">Submit</button>
           </form>
+        </section>
+        <section>
+          <h3>Transactions</h3>
+          <div id="transactionList">
+            {renderList()}
+          </div>
+          <div id="status" />
         </section>
       </main>
     </>
