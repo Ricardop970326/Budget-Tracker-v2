@@ -193,7 +193,7 @@ input#type {
   padding: 10px;
   background: rgb(172, 171, 171);
   position: relative;
-  border: 2px solid black;
+  border-bottom: 2px solid black;
 }
 .option span {
   color: black;
